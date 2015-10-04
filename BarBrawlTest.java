@@ -133,8 +133,13 @@ public class BarBrawlTest {
         for(int i = 0; i < atEstablishment.length; i++)
         {
             System.out.println("Calling predictOutcome with argument:");
-            System.out.println("boolean[] atEstablishment = {" + atEstablishment[i][0] + "," + atEstablishment[i][1]
-                    + "};");
+            System.out.print("boolean[] atEstablishment = {");
+            for(int j = 0; j < atEstablishment[i].length; j++)
+            {
+                System.out.print(atEstablishment[i][j]);
+                if(j < atEstablishment[i].length - 1) System.out.print(",");
+                else System.out.println("};");
+            }
             outputs[i] = bb.predictOutcome(atEstablishment[i]);
             System.out.println("Your code's output was: " + outputs[i]);
             System.out.println();
@@ -143,8 +148,12 @@ public class BarBrawlTest {
             if(outputs[i] == "I DON'T KNOW")
                 iDontKnowCounter++;
             System.out.println("Calling learnObservation with arguments:");
-            System.out.println("boolean[] atEstablishment = {" + atEstablishment[i][0] + "," + atEstablishment[i][1]
-                    + "};");
+            for(int j = 0; j < atEstablishment[i].length; j++)
+            {
+                System.out.print(atEstablishment[i][j]);
+                if(j < atEstablishment[i].length - 1) System.out.print(",");
+                else System.out.println("};");
+            }
             System.out.println("boolean fightOccurred = " + fightOccurred[i]);
             bb.learnObservation(atEstablishment[i], fightOccurred[i]);
             System.out.println();
