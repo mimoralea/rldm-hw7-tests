@@ -153,8 +153,8 @@ public class BarBrawlTest {
         System.out.println("Your code output " + incorrectCounter + " incorrect answers.");
         if(incorrectCounter != 0) System.out.println("It should not output any incorrect answers.");
         System.out.println("Your code output " + iDontKnowCounter + " \"I DON'T KNOW\"s.");
-        if(iDontKnowCounter != maxIDontKnows) System.out.println("It should output \"I DON'T KNOW\" at most " +
+        if(iDontKnowCounter > maxIDontKnows) System.out.println("It should output \"I DON'T KNOW\" at most " +
                 maxIDontKnows + " time.");
-        Assert.assertTrue(incorrectCounter == 0 && iDontKnowCounter == maxIDontKnows);
+        Assert.assertTrue(incorrectCounter == 0 && iDontKnowCounter <= maxIDontKnows);
     }
 }
