@@ -148,6 +148,7 @@ public class BarBrawlTest {
             if(outputs[i] == "I DON'T KNOW")
                 iDontKnowCounter++;
             System.out.println("Calling learnObservation with arguments:");
+            System.out.print("boolean[] atEstablishment = {");
             for(int j = 0; j < atEstablishment[i].length; j++)
             {
                 System.out.print(atEstablishment[i][j]);
