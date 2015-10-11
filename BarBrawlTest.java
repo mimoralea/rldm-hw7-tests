@@ -143,9 +143,9 @@ public class BarBrawlTest {
             outputs[i] = bb.predictOutcome(atEstablishment[i]);
             System.out.println("Your code's output was: " + outputs[i]);
             System.out.println();
-            if(outputs[i] == "FIGHT" && !fightOccurred[i] || outputs[i] == "NO FIGHT" && fightOccurred[i])
+            if(outputs[i].equals("FIGHT") && !fightOccurred[i] || outputs[i].equals("NO FIGHT") && fightOccurred[i])
                 incorrectCounter++;
-            if(outputs[i] == "I DON'T KNOW")
+            if(outputs[i].equals("I DON'T KNOW"))
                 iDontKnowCounter++;
             System.out.println("Calling learnObservation with arguments:");
             System.out.print("boolean[] atEstablishment = {");
